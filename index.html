@@ -1,23 +1,692 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+ 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "폴스타 유지비 자동차리스 장기렌트카: 2026년 모델별 최적 견적 및 비교 분석",
+      "url": "https://www.example.com/polestar-maintenance-lease-rental",
+      "description": "2026년 기준 폴스타 전 모델의 유지비 분석 및 자동차리스, 장기렌트카 견적 비교 분석을 다룹니다. 합리적인 전기차 운용을 위한 최적의 가이드를 제공합니다.",
+      "about": {
+        "@type": "Thing",
+        "name": "폴스타 유지비 및 금융 상품 비교"
+      },
+      "lastReviewed": "2026-05-21",
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "text": "폴스타 2, 폴스타 3, 폴스타 4 모델의 연간 세금, 충전비, 보험료를 포함한 평균 유지비를 분석하고, 자동차리스와 장기렌트카 상품의 장단점 및 차이점을 명확히 비교하여 가장 저렴한곳을 찾는 노하우를 전달합니다."
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f6f9;
+            line-height: 1.8;
+            color: #1e293b;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 4px solid #0d9488;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .main-menu li {
+            padding: 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 18px 24px;
+            display: block;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: #0d9488;
+            background-color: #f8fafc;
+        }
+
+        .content-wrap {
+            display: flex;
+            margin-top: 30px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-widget {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .sidebar h2 {
+            font-size: 1.3em;
+            color: #0f172a;
+            border-bottom: 2px solid #0d9488;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .sidebar .sub-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .sub-menu li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar .sub-menu a {
+            text-decoration: none;
+            color: #475569;
+            display: block;
+            padding: 10px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        .sidebar .sub-menu a:hover {
+            background-color: #0d9488;
+            color: #ffffff;
+        }
+
+        .main-content h2 {
+            font-size: 1.8em;
+            color: #0f172a;
+            border-bottom: 3px solid #0d9488;
+            padding-bottom: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .main-content h3 {
+            font-size: 1.4em;
+            color: #0f172a;
+            border-left: 5px solid #0d9488;
+            padding-left: 14px;
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+
+        .main-content p {
+            font-size: 1.05em;
+            color: #334155;
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #f0fdfa;
+            border-left: 5px solid #0d9488;
+            padding: 24px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.05em;
+            color: #115e59;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        thead th {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .image-box {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .interactive-section {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 35px 0;
+        }
+
+        .interactive-section h3 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+            color: #0f172a;
+            border-bottom: 2px solid #0d9488;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            color: #1e293b;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .btn-submit {
+            background-color: #0d9488;
+            color: #ffffff;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #0f766e;
+        }
+
+        .faq-block {
+            margin-top: 30px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: #475569;
+            margin: 0;
+            padding-left: 10px;
+            border-left: 3px solid #0d9488;
+        }
+
+        .links-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links-section li {
+            margin-bottom: 12px;
+        }
+
+        .links-section a {
+            color: #0d9488;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .links-section a:hover {
+            color: #0f766e;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 60px;
+            border-top: 4px solid #0d9488;
+        }
+
+        @media (max-width: 992px) {
+            .content-wrap {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>폴스타 유지비 자동차리스 장기렌트카 가이드</h1>
+            <p>2026년 전기차 시장 분석에 기반한 가장 경제적인 차량 운용 솔루션</p>
+        </div>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="container">
+            <ul class="main-menu">
+                <li><a href="#intro">폴스타 유지비 분석</a></li>
+                <li><a href="#comparison">리스 vs 장기렌트</a></li>
+                <li><a href="#subsidies">2026년 보조금 동향</a></li>
+                <li><a href="#calculator">견적 시뮬레이터</a></li>
+                <li><a href="#reviews">커뮤니티 트렌드</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <div class="container content-wrap">
+        <div class="main-content">
+            <section id="intro">
+                <h2>폴스타 전기차 라인업과 유지비의 핵심 구조</h2>
+                <div class="image-box">
+                    <img src="https://images.pexels.com/photos/9800029/pexels-photo-9800029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="전기차 충전 및 스마트 디바이스">
+                </div>
+                <p>프리미엄 전기차 브랜드인 폴스타는 수려한 북유럽 미니멀리즘 디자인과 뛰어난 성능으로 전 세계적인 인기를 얻고 있습니다. 대표 모델인 <strong>폴스타 2 Single Motor</strong> 및 <strong>폴스타 2 Dual Motor</strong>를 시작으로, 대형 플래그십 SUV인 <strong>폴스타 3 Long Range Dual Motor</strong>, 그리고 세련된 쿠페형 SUV로 급부상한 <strong>폴스타 4 Long Range Single Motor</strong>와 <strong>폴스타 4 Long Range Dual Motor</strong>까지 라인업을 촘촘히 넓히고 있습니다. 최근 공개된 고성능 스포츠 세단인 <strong>폴스타 5</strong>와 로드스터 모델인 <strong>폴스타 6</strong>까지 가세하며 시장의 관심은 그 어느 때보다 뜨겁습니다.</p>
+                
+                <p>전기차를 구매하려는 소비자들이 가장 먼저 고민하는 요소는 단연 <strong>유지비</strong>입니다. 주유비 대신 지출하는 전기 충전 요금은 내연기관 차량에 비해 평균 수준이 매우 낮기 때문입니다. 하지만 전기차의 연간 세금, 특화된 전용 타이어 교체 비용, 전용 보험료 등을 종합적으로 산출해 보면 연간 드는 비용이 얼마인지 정확하게 확인해야 할 필요가 있습니다. 충전 방식 역시 집밥이라 불리는 완속 충전과 공용 급속 충전 간에 단가 차이가 존재하므로 꼼꼼하게 따져봐야 합니다.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>유지비 핵심 산출 요약:</strong> 전기차 세금은 지방세를 포함하여 연간 13만 원 정액으로 내연기관 차량 대비 큰 세금 혜택을 자랑합니다. 하지만 고출력 모터와 고용량 배터리를 탑재한 폴스타의 특성상 보험 가입 시 자차 담보 금액이 높게 책정되어 일반 차량보다 높은 수준의 연간 보험료가 예상 가격으로 형성될 수 있습니다.</p>
+                </div>
+
+                <h3>폴스타 세부 트림 구성 및 기술적 차이점</h3>
+                <p>폴스타 라인업은 배터리 용량과 모터 구성에 따라 다양하게 분류됩니다. 과거 인기를 끌었던 <strong>MY24 폴스타 2</strong>부터 최근 주력으로 판매되는 <strong>MY25 폴스타 4</strong> 및 <strong>MY26 폴스타 3</strong>까지 지속적인 소프트웨어 업데이트와 배터리 매니지먼트 시스템 개선이 이루어지고 있습니다. 주행 거리를 극대화하고 싶다면 후륜 구동 기반인 <strong>Rear Wheel Drive(RWD) Long Range Single Motor</strong> 트림이 최적의 선택이며, 폭발적인 가속력과 주행 안정감을 추구한다면 사륜 구동인 <strong>All Wheel Drive(AWD) Long Range Dual Motor</strong> 트림을 추천합니다. 추가 옵션인 <strong>Pilot Pack</strong>, <strong>Plus Pack</strong>, 그리고 주행 성능을 한 차원 끌어올리는 <strong>Performance Pack</strong>을 추가함에 따라 차량의 실구매 금액과 최종 견적 비용은 달라집니다. 희소성을 지닌 한정판 에디션인 <strong>BST Edition 270</strong> 및 <strong>BST Edition 230</strong>과 같은 고성능 특화 상품들도 매니아층에서 꾸준히 회자되고 있습니다.</p>
+            </section>
+
+            <section id="comparison">
+                <h2>자동차리스 vs 장기렌트카 장단점 및 차이점 분석</h2>
+                <p>전기차를 운용하는 방식은 크게 직접 구매하는 방법과 임대형 금융 상품을 활용하는 방식으로 나뉩니다. 그중에서도 많은 법인 및 개인사업자, 그리고 영리한 직장인들이 <strong>자동차리스</strong>와 <strong>장기렌트카</strong>를 선택하고 있습니다. 두 방식은 월 납부 금액에 포함되는 항목과 세제 혜택 면에서 뚜렷한 장단점과 차이점을 지니고 있습니다.</p>
+
+                <h3>1. 자동차리스의 장단점</h3>
+                <p><strong>장점:</strong> 자동차리스는 일반 자가용과 동일하게 일반 번호판을 부착하여 리스 이용 차량임을 겉으로 드러내지 않는다는 장점이 있습니다. 개인의 품위를 유지하고 싶은 비즈니스맨들에게 강력하게 추천되는 이유입니다. 또한 개인의 자동차 보험 요율이 그대로 승계되므로 오랜 무사고 경력을 가진 운전자라면 보험료 할인 혜택을 최대한 누려 총 비용을 크게 아낄 수 있습니다.</p>
+                <p><strong>단점:</strong> 리스 금융을 가입할 경우 개인 신용도에 대출 성격의 부채로 잡힐 수 있으며, 연간 약정 주행 거리를 초과할 경우 감가 비용이 별도로 추가되어 최종 예상 가격에 부정적인 영향을 줄 수 있습니다. 사고 발생 시 리스 이용자의 개인 요율에 따라 보험료가 인상될 위험도 존재합니다.</p>
+
+                <h3>2. 장기렌트카의 장단점</h3>
+                <p><strong>장점:</strong> 장기렌트카는 렌트 전용 번호판(하, 허, 호)을 부착해야 하지만 금융 부채로 잡히지 않아 개인 신용 등급 관리에 절대적으로 유리합니다. 또한, 매월 지불하는 렌트 금액 내에 자동차세, 정비 비용, 그리고 자차 보험 가입 금액이 모두 녹아 있어 관리가 매우 간편합니다. 초보 운전자나 사고 이력이 많아 개별 보험료가 비싼 고객에게는 장기렌트가 가장 저렴한곳이자 싼곳으로 평가받습니다. 사고가 발생해도 정해진 소액의 면책금만 지불하면 보험 할증이 전혀 적용되지 않습니다.</p>
+                <p><strong>단점:</strong> 렌트카 전용 번호판을 사용해야 하므로 번호판에 예민한 오너들에게는 감점 요인이 될 수 있습니다. 또한 무사고 기간이 아무리 길어도 개인 보험 경력이 단절되어 추후 개인 명의로 차량을 다시 구입하여 가입할 때 이전 혜택을 받지 못할 수 있습니다.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>비교 항목</th>
+                            <th>자동차리스</th>
+                            <th>장기렌트카</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>번호판 종류</strong></td>
+                            <td>일반 번호판 (하, 허, 호 아님)</td>
+                            <td>하, 허, 호 전용 번호판</td>
+                        </tr>
+                        <tr>
+                            <td><strong>보험 경력 유지</strong></td>
+                            <td>개인 보험 경력 유지 및 누적</td>
+                            <td>렌트사 일괄 보험 적용 (개인 경력 단절)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>부채 인식 여부</strong></td>
+                            <td>개인 금융 부채로 인식 가능성 있음</td>
+                            <td>단순 임대 상품으로 부채 미인식</td>
+                        </tr>
+                        <tr>
+                            <td><strong>사고 시 리스크</strong></td>
+                            <td>이용자 개인 보험 요율 할증 위험</td>
+                            <td>면책금 제도로 보험료 할증 없음</td>
+                        </tr>
+                        <tr>
+                            <td><strong>정비 서비스 선택</strong></td>
+                            <td>자가 정비 또는 기본 포함 선택</td>
+                            <td>정비 패키지 가입 시 완벽 케어 가능</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="subsidies">
+                <h2>2026년 전기차 보조금 동향 및 비용 영향</h2>
+                <p>2026년 기준 전기차 구매 지원금 정책은 예년에 비해 사뭇 까다로워졌습니다. 환경부의 친환경 지원금 단가가 축소되는 한편, 차량의 주행 성능과 배터리 효율, 재활용성에 따른 차등 계수가 강화되었습니다. <strong>폴스타 2 Single Motor Long Range</strong> 및 신형 <strong>폴스타 4 Long Range Single Motor</strong> 트림은 배터리 밀도와 주행거리 요건을 높게 충족하여 비교적 우수한 지원금을 확보할 수 있는 반면, 고가의 대형 모델인 <strong>폴스타 3</strong>나 초고성능 트림인 <strong>Performance Pack</strong> 장착 차량은 정부 보조금 지급 구간의 기준 가격 상한선 근처에 위치하여 지원 비율이 줄어들 수 있습니다. 따라서 차량 계약 전 각 지자체별로 공고된 잔여 보조금을 정확히 확인하고 신속하게 접수하는 순위 싸움이 매우 중요합니다. 리스 및 렌트 전문 업체는 대량의 보조금 물량을 미리 선확보하고 있어 이를 이용하면 개인이 지출해야 하는 초기 부담금을 현저하게 낯추어 저렴하게 계약할 수 있습니다.</p>
+            </section>
+
+            <section id="calculator">
+                <div class="interactive-section">
+                    <h3>폴스타 유지비 및 금융 비교 실시간 시뮬레이터</h3>
+                    <p>아래에서 모델과 운용 조건을 입력하시면, 2026년 최신 기준 요율을 바탕으로 산출된 월 예상 납부 금액과 예상 연간 총 유지 비용 견적을 즉시 시뮬레이션해 드립니다.</p>
+                    
+                    <form id="calcForm" onsubmit="calculatePolestar(); return false;">
+                        <div class="form-group">
+                            <label for="car_model">선택할 폴스타 모델</label>
+                            <select id="car_model" required>
+                                <option value="p2_single">Polestar 2 Long Range Single Motor (기본 가격 약 5,490만 원)</option>
+                                <option value="p2_dual">Polestar 2 Long Range Dual Motor (기본 가격 약 6,090만 원)</option>
+                                <option value="p3_dual">Polestar 3 Long Range Dual Motor (기본 가격 약 9,490만 원)</option>
+                                <option value="p4_single">Polestar 4 Long Range Single Motor (기본 가격 약 6,690만 원)</option>
+                                <option value="p4_dual">Polestar 4 Long Range Dual Motor (기본 가격 약 7,190만 원)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contract_type">희망 운용 방식</label>
+                            <select id="contract_type" required>
+                                <option value="lease">자동차리스 (일반 번호판 선호)</option>
+                                <option value="rent">장기렌트카 (종합 보험료 포함, 부채 미인식)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="period">계약 기간 선택</label>
+                            <select id="period" required>
+                                <option value="36">36개월</option>
+                                <option value="48">48개월</option>
+                                <option value="60" selected>60개월 (가장 선호되는 조건)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prepayment">초기 납입금 비율 (보증금 또는 선납금)</label>
+                            <select id="prepayment" required>
+                                <option value="0">0% (초기 비용 없음)</option>
+                                <option value="10">10%</option>
+                                <option value="20">20%</option>
+                                <option value="30" selected>30% (합리적 금리 조건)</option>
+                                <option value="40">40%</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mileage">연간 예상 주행거리 (km)</label>
+                            <input type="number" id="mileage" value="20000" min="5000" max="50000" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit">맞춤 시뮬레이션 견적 내기</button>
+                    </form>
+
+                    <div id="calc_result" style="margin-top: 25px; padding: 20px; background-color: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; display: none;">
+                        <h4 style="margin-top: 0; color: #0f172a; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">시뮬레이션 분석 결과</h4>
+                        <p style="margin: 8px 0;"><strong>선택 모델:</strong> <span id="res_model">-</span></p>
+                        <p style="margin: 8px 0;"><strong>운용 방식:</strong> <span id="res_type">-</span></p>
+                        <p style="margin: 8px 0;"><strong>예상 월 납입료:</strong> <span id="res_monthly" style="color: #0d9488; font-weight: 700;">-</span></p>
+                        <p style="margin: 8px 0;"><strong>예상 연간 전기 충전비:</strong> <span id="res_charge">-</span></p>
+                        <p style="margin: 8px 0;"><strong>연간 세금 (자동차세):</strong> <span id="res_tax">130,000 원 (전기차 정액 세율 적용)</span></p>
+                        <p style="margin: 8px 0; font-size: 0.95em; color: #64748b;" id="res_info"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reviews">
+                <h2>전기차 유저 생생 리뷰 및 AI 검색 트렌드</h2>
+                <p>최근 국내의 대표적인 자동차 커뮤니티인 <strong>디시</strong> 전기차 갤러리와 <strong>네이버</strong> 친환경차 카페 등에서는 폴스타 오너들의 <strong>내돈내산 후기</strong>가 활발하게 공유되고 있습니다. 사용자들은 실주행거리와 겨울철 배터리 효율성에 대한 정보를 가감 없이 교류하고 있으며, 신형 폴스타 4의 후방 유리가 없는 독특한 디지털 룸미러 구조에 대해 뜨거운 토론을 벌이고 있습니다. 대부분의 사용자 평가는 수입 프리미엄 브랜드 중 가성비가 돋보이며, 수입 세단 경쟁 차종인 <strong>BMW i4</strong>나 테슬라의 <strong>Tesla Model 3</strong> 및 <strong>Tesla Model Y</strong>, 국산 프리미엄 라인인 <strong>Genesis GV60</strong> 등과 비교했을 때 인테리어 고급감과 고속 안정성 면에서 우수한 점수를 보인다는 평입니다.</p>
+                
+                <p>또한 정보의 신뢰성을 얻기 위해 포털인 <strong>구글</strong>과 <strong>네이버</strong> 검색은 물론, <strong>유튜브</strong> 시승 리뷰 영상, <strong>트위터</strong>나 <strong>인스타그램</strong>, <strong>페이스북</strong> 등의 SNS를 폭넓게 탐색하며 정보를 교차 검증하는 스마트한 소비 흐름이 관찰됩니다. 나아가 최신 스마트 엔진인 <strong>제미나이(Gemini)</strong> 및 <strong>챗지피티(ChatGPT)</strong>와 같은 인공지능(AI) 솔루션을 활용하여 '연 소득 대비 합리적인 폴스타 월 리스 견적 비교'를 정밀하게 분석 요청하는 트렌드가 자리 잡아 가고 있습니다.</p>
+            </section>
+
+            <section id="cheapest">
+                <h2>가장 저렴한곳을 선별하는 스마트 리스/렌트 계약 비결</h2>
+                <p>폴스타 전 차종을 가장 합리적인 비용으로 인수하기 위해서는 단순 견적서 비교를 넘어 대형 에이전시 전문 업체들이 제공하는 비공식 할인 혜택을 반드시 캐치해 내야 합니다. 수많은 금융 제휴사가 경쟁하는 구조이기 때문에, 신규 계약 시 제공되는 특별 금융 프로모션을 꼼꼼히 확인해야 합니다. 일부 업체에서는 한정 기간 동안 주행거리 무제한 변경 혜택, 고급 전면 선팅 및 프리미엄 블랙박스 무료 장착과 같은 파격적인 <strong>사은품</strong> 및 프로모션 패키지를 내세워 활발한 유치전을 벌이고 있습니다.</p>
+                <p>일부 온라인 전문 직거래 중개 채널에서는 비공식 <strong>현금지원</strong> 프로모션이나 백화점 <strong>상품권</strong> 증정 이벤트를 상시 운용하고 있어 고객이 체감하는 실질 할인율을 대폭 끌어올리고 있습니다. 타사 대비 단 몇 만 원이라도 납부액이 싼곳을 선정하는 지름길은 다양한 캐피탈사의 실시간 금리 변동 추이를 수집하여 피드백해 주는 맞춤형 컨설팅 시스템을 이용하는 것입니다.</p>
+            </section>
+
+            <section id="faq">
+                <h2>자주 묻는 질문 (FAQ)</h2>
+                <div class="faq-block">
+                    <div class="faq-item">
+                        <p class="faq-question">Q1. 폴스타 전기차의 실제 겨울철 전비 하락폭은 평균 어느 정도인가요?</p>
+                        <p class="faq-answer">A1. 폴스타 전 모델에 탑재된 히트펌프 시스템 덕분에 영하의 혹한기에서도 주행거리 감소폭이 효율적으로 억제됩니다. 일반적으로 완속 충전 및 배터리 프리컨디셔닝 기능을 활성화하면 봄/가을철 상온 주행 거리에 비해 약 15%에서 20% 이내의 하락 수준에 머무르며, 이는 동급 경쟁 모델인 Ioniq 5 나 EV6 등과 비교해도 동등 이상의 경쟁력을 유지하는 수치입니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q2. 개인 사업자의 경우 리스료를 전액 경비 처리할 수 있나요?</p>
+                        <p class="faq-answer">A2. 예, 그렇습니다. 업무용 승용차 법안 기준에 부합하는 경우 연간 최대 1,500만 원(리스료 및 렌트비 연 800만 원 한도, 유류비 및 기타 주행 비용 합산 700만 원 한도)까지 비용 처리가 무난하게 가능합니다. 초과 금액 역시 이월되어 필요경비 처리가 이루어지므로 세무 절세 효과 측면에서 대단히 강력한 장점을 가집니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q3. 만기 시 인수 가격과 반납 조건 중 어떤 결정이 압도적으로 유리한가요?</p>
+                        <p class="faq-answer">A3. 계약 체결 시 잔존가치 설정 수준과 중고차 시장 시세에 따라 갈립니다. 일반적으로 전기 배터리 기술의 발전 속도가 빠른 현재의 트렌드상, 3년에서 5년 주행 후 만기 시점에 소유권을 고집하기보다는 무상 반납 옵션을 선택하여 전기차 잔존 가치 방어의 불확실한 리스크를 최소화하는 고객 비율이 매우 높습니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q4. 전기차 리스나 장기렌트 이용 시에도 파란색 전기차 번호판을 사용하나요?</p>
+                        <p class="faq-answer">A4. 장기렌트카의 경우 법인 명의의 녹색 고가 차량 번호판 대상 기준에 포함되지 않는 한 원칙적으로 친환경 전용 블루 번호판에 '하, 허, 호' 문자가 조합된 전용 번호판이 교부됩니다. 반면 자동차리스의 경우에는 일반적인 자가용 번호체계와 완전히 동일한 번호판이 부여되므로 임대 차량에 대한 거부감을 완벽히 상쇄해 줍니다.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Q5. 수입 전기차 폴스타의 정비 서비스 및 사후 관리 AS 네트워크는 편리한가요?</p>
+                        <p class="faq-answer">A5. 폴스타는 볼보자동차코리아의 공식 서비스 센터 인프라를 긴밀히 공유하여 협력 정비 체계를 견고하게 구축하고 있습니다. 수입 브랜드 중 최상위 수준의 접근성과 정비 편리성을 확보하였으며, 모바일 전용 앱을 통해 실시간 정비 예약 접수 및 픽업 앤 딜리버리 서비스를 간편히 진행할 수 있습니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="links-section">
+                <h2>신뢰할 수 있는 공식 정보 출처</h2>
+                <ul>
+                    <li><a href="https://www.polestar.com/kr/" target="_blank" rel="noopener">폴스타 코리아 (Polestar Korea) 공식 브랜드 홈페이지</a></li>
+                    <li><a href="https://www.ev.or.kr/portal/main" target="_blank" rel="noopener">무공해차 통합누리집: 2026년 전기차 차종별 친환경 보조금 및 충전기 위치 안내</a></li>
+                    <li><a href="https://namu.wiki/w/%ED%8F%B4%EC%8A%A4%ED%83%80(%EC%95%84%EC%96%B4%EB%A0%88%EB%B8%8C)" target="_blank" rel="noopener">나무위키: 폴스타(자동차 브랜드) 탄생 비화 및 상세 트림 백과사전</a></li>
+                    <li><a href="https://www.carisyou.com/" target="_blank" rel="noopener">카이즈유 데이터 연구소: 월간 국산 및 수입 전기 승용차 신규 등록 통계 정보</a></li>
+                    <li><a href="https://www.fss.or.kr/" target="_blank" rel="noopener">금융감독원 (FSS) 금융소비자정보포털 파인: 자동차 금융 이용 유의 사항 확인</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-widget">
+                <h2>1:1 프리미엄 비교 상담</h2>
+                <p>전국 최저가 견적비교와 실시간 한정 수량 즉시 출고 재고 조회를 빠르게 도와드립니다.</p>
+                <form onsubmit="alert('프리미엄 견적 비교 신청이 성공적으로 접수되었습니다. 담당 영업팀에서 신속히 연락드리겠습니다.'); return false;">
+                    <div class="form-group">
+                        <label for="sb_name">고객 성함</label>
+                        <input type="text" id="sb_name" placeholder="예: 홍길동" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sb_phone">연락처</label>
+                        <input type="text" id="sb_phone" placeholder="010-XXXX-XXXX" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sb_interest">관심 있는 폴스타 라인업</label>
+                        <select id="sb_interest">
+                            <option value="p2">폴스타 2 (세련된 고성능 패스트백)</option>
+                            <option value="p4">폴스타 4 (혁신적인 쿠페형 SUV)</option>
+                            <option value="p3">폴스타 3 (프리미엄 대형 퍼포먼스 SUV)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center;">
+                        <input type="checkbox" id="privacy_agree" required>
+                        <label for="privacy_agree" style="margin: 0; font-size: 0.85em;">개인정보 수집 및 제공에 동의합니다.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">실시간 최저가 상담 신청</button>
+                </form>
+            </div>
+
+            <div class="sidebar-widget">
+                <h2>인기 검색 키워드 목록</h2>
+                <ul class="sub-menu">
+                    <li><a href="#intro">폴스타 4 RWD 실제 전비</a></li>
+                    <li><a href="#comparison">법인 전기차 연간 리스료 경비처리</a></li>
+                    <li><a href="#cheapest">폴스타 장기렌트 대량 선출고 물량</a></li>
+                    <li><a href="#intro">Performance Pack 탑재 듀얼모터 시승기</a></li>
+                    <li><a href="#reviews">MY25 폴스타 4 디지털 룸미러 실후기</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculatePolestar() {
+            var model = document.getElementById("car_model").value;
+            var type = document.getElementById("contract_type").value;
+            var period = parseInt(document.getElementById("period").value);
+            var prepPercent = parseInt(document.getElementById("prepayment").value);
+            var mileage = parseInt(document.getElementById("mileage").value);
+
+            var carPrice = 54900000;
+            var modelName = "Polestar 2 Single Motor";
+
+            if (model === "p2_dual") {
+                carPrice = 60900000;
+                modelName = "Polestar 2 Dual Motor";
+            } else if (model === "p3_dual") {
+                carPrice = 94900000;
+                modelName = "Polestar 3 Long Range Dual Motor";
+            } else if (model === "p4_single") {
+                carPrice = 66900000;
+                modelName = "Polestar 4 Long Range Single Motor";
+            } else if (model === "p4_dual") {
+                carPrice = 71900000;
+                modelName = "Polestar 4 Long Range Dual Motor";
+            }
+
+            var prepAmount = carPrice * (prepPercent / 100);
+            var residualValuePercent = 45; // 60개월 기준 기본 잔존 가치
+            if (period === 36) {
+                residualValuePercent = 55;
+            } else if (period === 48) {
+                residualValuePercent = 50;
+            }
+
+            var residualValue = carPrice * (residualValuePercent / 100);
+            var principalToAmortize = carPrice - prepAmount - residualValue;
+            if (principalToAmortize < 0) principalToAmortize = 0;
+
+            // 월 이율 대략 연 5% 기준
+            var annualInterestRate = 0.05;
+            var monthlyInterestRate = annualInterestRate / 12;
+            var monthlyPayment = 0;
+
+            if (principalToAmortize > 0) {
+                monthlyPayment = (principalToAmortize * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -period));
+            }
+            
+            // 렌트일 경우 보험료 및 정비비용 가산
+            if (type === "rent") {
+                monthlyPayment += 95000; 
+            } else {
+                monthlyPayment += 40000; // 리스 기본 수수료 및 부가비용
+            }
+
+            // 충전비 연간 계산 (전비 대략 4.5km/kWh로 단순화, kWh당 340원 수준 기준)
+            var efficiency = 4.7;
+            var ratePerKwh = 350;
+            var annualChargeCost = (mileage / efficiency) * ratePerKwh;
+
+            var typeName = (type === "lease") ? "자동차리스 (정비 비포함 조건)" : "장기렌트카 (자차 및 종합보험 포함)";
+
+            document.getElementById("res_model").innerText = modelName + " (신차가액 " + Math.round(carPrice / 10000) + "만 원 기준)";
+            document.getElementById("res_type").innerText = typeName;
+            document.getElementById("res_monthly").innerText = "월 약 " + Math.round(monthlyPayment).toLocaleString() + " 원 (보증/선납 " + prepPercent + "% 납부 시)";
+            document.getElementById("res_charge").innerText = "연 약 " + Math.round(annualChargeCost).toLocaleString() + " 원 (전비 주행 충전량 " + mileage.toLocaleString() + "km 산출)";
+            document.getElementById("res_info").innerText = "* 위 산출 결과는 2026년 기준 가상의 시뮬레이션 금액이며, 실제 개개인의 연령대, 신용 점수, 추가 할인 여건 및 현물 사은품이나 현금지원 프로모션 적용에 따라 차이가 있을 수 있습니다. 정식 비교 견적 가입을 통하시면 더 저렴한 혜택을 제공받으실 수 있습니다.";
+
+            document.getElementById("calc_result").style.display = "block";
+        }
+    </script>
+  
